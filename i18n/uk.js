@@ -123,6 +123,7 @@ window.I18N.uk = {
   "tone.yesText": "«Ви маєте право на безпеку. Ми поруч і підкажемо наступний крок».",
   "contacts.social": "Соцмережі",
   "contacts.instagramNote": "Анонси подій, групи підтримки, корисні матеріали",
+  "contacts.qrAlt": "QR-код Instagram @life_giving24",
   "contacts.facebookNote": "Новини організації та звіти про проєкти",
   "footer.edrpou": "Код ЄДРПОУ 45638920",
   "footer.slogan": "«Життєдайна» — сила жінки у праві на вибір."

@@ -123,6 +123,7 @@ window.I18N.en = {
   "tone.yesText": "“You have the right to be safe. We are here and will help with the next step.”",
   "contacts.social": "Social media",
   "contacts.instagramNote": "Event announcements, support groups, useful materials",
+  "contacts.qrAlt": "Instagram QR code @life_giving24",
   "contacts.facebookNote": "Organisation news and project reports",
   "footer.edrpou": "EDRPOU code 45638920",
   "footer.slogan": "Zhyttiedaina — a woman’s strength lies in her right to choose."
