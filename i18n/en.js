@@ -9,7 +9,6 @@ window.I18N.en = {
   "nav.contacts": "Contact",
   "nav.cta": "How to get help",
   "lang.label": "Site language",
-  "hero.eyebrow": "Civil society organisation · Our space is Ukraine",
   "hero.title": "A woman’s strength lies in her right to safety, dignity and her own choice",
   "hero.text": "We protect rights, support, educate and empower women, children and young people — so they can overcome the consequences of violence and war and become active agents of change.",
   "hero.btnHelp": "How to get help",
