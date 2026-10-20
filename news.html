@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Новини — ГО «Життєдайна»</title>
+<meta name="description" content="Жіноча громадська організація «Життєдайна»: захист прав, протидія насильству, психологічна та правова підтримка, жіноче лідерство. Львівська, Миколаївська та Херсонська області.">
+<meta name="theme-color" content="#A2238E">
+<link rel="icon" href="assets/emblem.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="index.html#top"><picture><source media="(max-width:420px)" srcset="assets/emblem.svg"><img src="assets/logo-horizontal.svg" alt="Життєдайна — логотип" data-i18n-attr="alt:logo.alt" width="161" height="48"></picture></a>
+    <nav class="nav" id="site-nav">
+      <a href="index.html#about" data-i18n="nav.about">Про нас</a>
+      <a href="news.html" data-i18n="nav.news">Новини</a>
+      <a href="index.html#directions" data-i18n="nav.directions">Напрями</a>
+      <a href="index.html#help" data-i18n="nav.help">Отримати допомогу</a>
+      <a href="index.html#values" data-i18n="nav.values">Цінності</a>
+      <a href="index.html#transparency" data-i18n="nav.transparency">Звітність</a>
+      <a href="index.html#contacts" data-i18n="nav.contacts">Контакти</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Мова сайту" data-i18n-attr="aria-label:lang.label">
+      <button class="lang__btn" type="button" data-lang="uk" aria-pressed="true">UA</button>
+      <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Меню" data-i18n-attr="aria-label:nav.menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="section" id="top">
+  <div class="wrap" id="news-page"></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__col">
+      <img class="footer__logo" src="assets/logo-horizontal-white.svg" alt="Життєдайна" data-i18n-attr="alt:logo.alt" width="161" height="48">
+      <p data-i18n="footer.tagline">Жіноча громадська організація: права, безпека, підтримка та лідерство.</p>
+      <p class="footer__slogan" data-i18n="footer.slogan">«Життєдайна» — сила жінки у праві на вибір.</p>
+    </div>
+    <div class="footer__col">
+      <p class="eyebrow" data-i18n="footer.sections">Розділи</p>
+      <a href="index.html#about" data-i18n="nav.about">Про нас</a>
+      <a href="news.html" data-i18n="nav.news">Новини</a>
+      <a href="index.html#directions" data-i18n="nav.directions">Напрями</a>
+      <a href="index.html#help" data-i18n="nav.help">Отримати допомогу</a>
+      <a href="index.html#values" data-i18n="nav.values">Цінності</a>
+      <a href="index.html#transparency" data-i18n="nav.transparency">Звітність</a>
+    </div>
+    <div class="footer__col">
+      <p class="eyebrow" data-i18n="footer.contacts">Контакти</p>
+      <a href="tel:+380670000000">+380 67 000 00 00</a>
+      <a href="mailto:life_giving@ukr.net">info@life-giving.org.ua</a>
+      <a href="https://www.instagram.com/life_giving24/" target="_blank" rel="noopener">Instagram @life_giving24</a>
+      <p>life-giving.org.ua</p>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p data-i18n="footer.rights">© 2026 ГО «Життєдайна» · Львівська область</p>
+    <p data-i18n="footer.edrpou">Код ЄДРПОУ 45638920</p>
+  </div>
+</footer>
+
+<script src="i18n/uk.js"></script>
+<script src="i18n/en.js"></script>
+<script src="i18n.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="news.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lorem-ipsum-2",
+    "date": "2026-10-20",
+    "title": {
+      "uk": "Lorem ipsum dolor sit amet",
+      "en": "Lorem ipsum dolor sit amet"
+    },
+    "body": {
+      "uk": "Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\n- ut enim ad minim veniam\n- quis nostrud exercitation\n- ullamco laboris nisi ut aliquip\n\nDuis aute irure dolor in [reprehenderit](https://example.com) in voluptate velit esse cillum dolore.",
+      "en": "Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\n- ut enim ad minim veniam\n- quis nostrud exercitation\n- ullamco laboris nisi ut aliquip\n\nDuis aute irure dolor in [reprehenderit](https://example.com) in voluptate velit esse cillum dolore."
+    },
+    "images": {
+      "Lorem ipsum 1": "assets/hero-artwork.jpg",
+      "Lorem ipsum 2": "assets/emblem.svg"
+    }
+  },
+  {
+    "id": "lorem-ipsum-1",
+    "date": "2026-10-01",
+    "title": {
+      "uk": "Consectetur adipiscing elit",
+      "en": "Consectetur adipiscing elit"
+    },
+    "body": {
+      "uk": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui **officia deserunt** mollit anim id est laborum.",
+      "en": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui **officia deserunt** mollit anim id est laborum."
+    }
+  }
+]

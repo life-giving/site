@@ -126,5 +126,14 @@ window.I18N.uk = {
   "contacts.qrAlt": "QR-код Instagram @life_giving24",
   "contacts.facebookNote": "Новини організації та звіти про проєкти",
   "footer.edrpou": "Код ЄДРПОУ 45638920",
-  "footer.slogan": "«Життєдайна» — сила жінки у праві на вибір."
+  "footer.slogan": "«Життєдайна» — сила жінки у праві на вибір.",
+  "nav.news": "Новини",
+  "news.eyebrow": "Події та оголошення",
+  "news.title": "Новини",
+  "news.prev": "Попереднє фото",
+  "news.next": "Наступне фото",
+  "news.back": "← Усі новини",
+  "news.empty": "Новин поки немає.",
+  "news.missing": "Новину не знайдено.",
+  "news.metaTitle": "Новини — ГО «Життєдайна»"
 };
