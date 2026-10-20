@@ -135,10 +135,11 @@ section[id]{scroll-margin-top:84px}
 .post__body a{text-decoration:underline;text-underline-offset:2px}
 .post__body strong{color:var(--ink)}
 .slider{position:relative;background:var(--milk)}
-.slider__track{display:flex;aspect-ratio:16/10;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+/* пропорцію задає кадр, а не стрічка: Safari не розраховує height:100% у flex-елементі з aspect-ratio батька */
+.slider__track{display:flex;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .slider__track::-webkit-scrollbar{display:none}
-.slider figure{flex:0 0 100%;margin:0;position:relative;scroll-snap-align:start}
-.slider img{width:100%;height:100%;object-fit:cover}
+.slider figure{flex:0 0 100%;width:100%;aspect-ratio:16/10;margin:0;position:relative;overflow:hidden;scroll-snap-align:start}
+.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .slider figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 16px 10px;font-size:13px;font-weight:700;color:#fff;background:linear-gradient(transparent,rgba(32,30,31,.65))}
 .slider__btn{position:absolute;top:50%;width:40px;height:40px;margin-top:-20px;border:none;border-radius:50%;background:rgba(255,255,255,.92);color:var(--purple);font-family:var(--font);font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 3px;transition:background .2s ease,color .2s ease}
 .slider__btn:hover{background:var(--purple);color:#fff}

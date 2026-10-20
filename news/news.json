@@ -11,8 +11,8 @@
       "en": "Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\n- ut enim ad minim veniam\n- quis nostrud exercitation\n- ullamco laboris nisi ut aliquip\n\nDuis aute irure dolor in [reprehenderit](https://example.com) in voluptate velit esse cillum dolore."
     },
     "images": {
-      "Lorem ipsum 1": "assets/hero-artwork.jpg",
-      "Lorem ipsum 2": "assets/emblem.svg"
+      "Lorem ipsum 1": "assets/emblem.svg",
+      "Lorem ipsum 2": "assets/emblem-tile.svg"
     }
   },
   {
