@@ -125,5 +125,14 @@ window.I18N.en = {
   "contacts.qrAlt": "Instagram QR code @life_giving24",
   "contacts.facebookNote": "Organisation news and project reports",
   "footer.edrpou": "EDRPOU code 45638920",
-  "footer.slogan": "Zhyttiedaina — a woman’s strength lies in her right to choose."
+  "footer.slogan": "Zhyttiedaina — a woman’s strength lies in her right to choose.",
+  "nav.news": "News",
+  "news.eyebrow": "Events and announcements",
+  "news.title": "News",
+  "news.prev": "Previous photo",
+  "news.next": "Next photo",
+  "news.back": "← All news",
+  "news.empty": "No news in English yet.",
+  "news.missing": "This news item was not found or is not available in English.",
+  "news.metaTitle": "News — Zhyttiedaina NGO"
 };

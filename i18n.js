@@ -45,6 +45,7 @@
       b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
     });
     try { localStorage.setItem(KEY, lang); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
   }
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-lang]'); if (!b) return;
