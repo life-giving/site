@@ -206,10 +206,16 @@ section[id]{scroll-margin-top:84px}
 
 /* ---------- transparency ---------- */
 .docs{display:flex;flex-direction:column;border-left:3px solid var(--slate);padding-left:22px}
-.docs div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
-.docs div:last-child{border-bottom:1px solid var(--line)}
-.docs .doc{font-size:16px;color:var(--slate);font-weight:700}
+.docs > *{display:flex;align-items:center;gap:14px;padding:14px 10px;border-top:1px solid var(--line)}
+.docs > :last-child{border-bottom:1px solid var(--line)}
+.docs .icon{width:22px;height:22px;color:var(--slate)}
+.docs .doc{flex:1;font-size:16px;line-height:1.4;color:var(--slate);font-weight:700}
 .docs .status{font-size:13px;color:var(--muted);white-space:nowrap}
+.doc-link{color:inherit;transition:background .2s ease}
+.doc-link:hover{background:var(--milk)}
+.doc-link:hover .doc,.doc-link:hover .icon{color:var(--purple)}
+.docs > div .doc,.docs > div .icon{color:var(--muted)}
+@media (max-width:480px){.docs > *{flex-wrap:wrap}.docs .status{flex-basis:100%;padding-left:36px}}
 
 /* ---------- contacts ---------- */
 .contacts{display:grid;gap:16px;margin-top:36px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
