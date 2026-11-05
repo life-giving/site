@@ -1,0 +1,19 @@
+%section.section.reveal#help
+  .wrap
+    %p.eyebrow= t("site.help.eyebrow")
+    %h2.title.title--spaced= t("site.help.title")
+    .steps
+      - %w[phone message sprout].zip(t("site.help.steps")).each_with_index do |(name, step), index|
+        %article.step
+          .step__head
+            %p.num= format("%02d", index + 1)
+            = icon(name)
+          %h3= step[:title]
+          %p= step[:text]
+    .tone
+      .tone__card.tone__card--yes
+        %p.eyebrow= t("site.help.tone_label")
+        %p= t("site.help.tone_text")
+      .tone__card.tone__card--rule
+        %p.eyebrow= t("site.help.rule_label")
+        %p= t("site.help.note")

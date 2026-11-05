@@ -1,0 +1,25 @@
+= form_with model: item, url: item.persisted? ? admin_news_path(item) : admin_news_index_path, class: "admin-panel admin-fields", data: { controller: "tabs" } do |form|
+  = render "admin/shared/errors", record: item
+  .admin-actions
+    %label
+      = t("admin.news.date")
+      = form.date_field :date, required: true
+    .admin-tabs{role: "group", "aria-label": t("admin.news.language")}
+      - { "uk" => "UA", "en" => "EN" }.each do |code, label|
+        %button{type: "button", "aria-pressed": (code == "uk").to_s, data: {tabs_target: "tab", language: code, action: "tabs#show"}}= label
+  - { "uk" => "UA", "en" => "EN" }.each do |code, label|
+    .admin-fields{hidden: code != "uk", data: {tabs_target: "panel", language: code}}
+      %label
+        = t("admin.news.title_field", language: label)
+        -# Not `required`: the browser can't report a missing value in the hidden tab, so Save would do nothing.
+        = form.text_field "title_#{code}"
+      .admin-editor{data: {controller: "preview", preview_url_value: preview_admin_news_index_path, preview_language_value: code}}
+        %label
+          = t("admin.news.body_field")
+          = form.text_area "body_#{code}", data: { action: "input->preview#schedule" }
+        %div
+          %span.admin-hint= t("admin.news.preview")
+          .admin-preview.post__body{id: "preview_#{code}"}= MarkdownRenderer.render(item["body_#{code}"])
+  .admin-actions
+    = form.submit t("admin.save"), class: "btn btn--primary admin-btn"
+  %p.admin-hint= t("admin.news.en_hint")

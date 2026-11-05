@@ -1,0 +1,16 @@
+%section.section.reveal#transparency
+  .wrap.split
+    .split__main
+      %p.eyebrow= t("site.transparency.eyebrow")
+      %h2.title= t("site.transparency.title")
+      %p.lead= t("site.transparency.p1")
+      %p.lead= t("site.transparency.p2")
+    .docs
+      - reports.each do |report|
+        = link_to rails_blob_path(report.file, only_path: true), class: "doc-link", target: "_blank", rel: "noopener" do
+          = icon("file")
+          %span.doc= report.title
+          %span.status= report_size(report)
+      - if reports.empty?
+        %div
+          %span.doc= t("site.transparency.empty")

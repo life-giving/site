@@ -1,0 +1,162 @@
+en:
+  date:
+    formats:
+      news: "%-d %B %Y"
+  site:
+    errors:
+      help: 'Need help? Call us:'
+      home: Back to the home page
+      not_found:
+        title: Page not found
+        text: The address may be out of date or contain a typo.
+      unprocessable:
+        title: We couldn't complete that request
+        text: Please refresh the page and try again.
+      server_error:
+        title: Something went wrong on the site
+        text: We're working on it. Please try again a little later.
+    meta:
+      title: Zhyttiedaina NGO — women’s rights, safety and support
+      description: 'Zhyttiedaina is a women’s civil society organisation in Ukraine: rights protection, prevention of violence, legal and psychological support, women’s leadership. Lviv, Mykolaiv and Kherson regions.'
+    nav:
+      about: About us
+      news: News
+      directions: What we do
+      help: Get help
+      values: Values
+      transparency: Reporting
+      contacts: Contact
+      menu: Menu
+    lang_label: Site language
+    logo_alt: Zhyttiedaina — logo
+    hero:
+      title: A woman’s strength lies in her right to safety, dignity and her own choice
+      text: We protect rights, support, educate and empower women, children and young people — so they can overcome the consequences of violence and war and become active agents of change.
+      btn_help: How to get help
+      btn_directions: What we do
+      card_eyebrow: Free consultation
+      card_title: You have the right to be safe
+      card_note: A lawyer and a psychologist. Confidential, non-judgemental, free of charge. Mon–Fri, 09:00–18:00.
+      emergency: In immediate danger — call 102 (police) or 15-47 (government hotline).
+    about:
+      eyebrow: About the organisation
+      title: A women’s organisation that works right beside you
+      p1: Zhyttiedaina works at the intersection of human rights, gender equality, protection from violence, legal and psychological support, women’s leadership and community development.
+      p2: We do not only respond to problems — we help people rebuild confidence, know their rights and make their own decisions.
+      stats:
+      - value: 3
+        text: regions where we work, including frontline communities
+      - value: 8
+        text: areas of work — from legal aid to leadership programmes
+      - value: 9
+        text: values we hold ourselves accountable to
+      box_title: Areas of work
+      box_items:
+      - Rights of women and children
+      - Preventing violence
+      - Psychological support
+      - Women’s leadership
+      - Legal aid
+      - Community work
+    directions:
+      title: What we do
+      hint: Select an area to see the services it includes.
+      items:
+      - title: Protecting the rights of women and girls
+        text: Legal advice, representation of interests, and accompaniment in dealings with the police, social services and courts.
+      - title: Preventing and responding to violence
+        text: 'Support for survivors of domestic and gender-based violence: crisis response, safety planning and case accompaniment.'
+      - title: Psychological support
+        text: Individual counselling, support groups, work with trauma and burnout.
+      - title: Women’s leadership
+        text: Training programmes, mentorship and support for women’s initiatives in communities.
+      - title: Support for those affected by the war
+        text: 'Work with displaced people, military families and women in frontline communities: humanitarian, legal and psychosocial assistance.'
+      - title: Work with youth and children
+        text: Violence prevention, safe spaces, and educational sessions on rights and personal boundaries.
+      - title: Community development
+        text: Cooperation with local authorities and organisations to strengthen communities’ capacity to respond to violence.
+      - title: Education and awareness
+        text: Trainings, information campaigns and public events on human rights and gender equality.
+    mission:
+      eyebrow: Our mission
+      text: To create conditions in which every woman has the right to safety, dignity and freedom of choice — and the power to change her own life and her community.
+      vision_eyebrow: We work towards communities where
+      vision_items:
+      - there is no tolerance for violence
+      - human rights are a real value
+      - women have a voice and influence decisions
+      - help is available in a crisis
+      - diversity is seen as a resource
+    help:
+      eyebrow: Step by step
+      title: How to get help
+      steps:
+      - title: Call or write to us
+        text: Your request is confidential. We never share your data with third parties without your consent.
+      - title: Tell us what happened
+        text: A coordinator will listen and arrange the support you need — legal, psychological or social.
+      - title: Receive ongoing support
+        text: You set the pace and the steps. We stay with you as long as needed.
+      note: We never publish stories or photographs without a person’s written consent.
+      tone_label: 'Yes'
+      tone_text: "“You have the right to be safe. We are here and will help with the next step.”"
+      rule_label: Rule
+    values:
+      title: Our values
+      hint: 'Nine principles shape our work: how we speak, what we promise and what we answer for.'
+      items:
+      - title: Dignity
+        text: Every person has the right to respect, safety and a dignified life.
+      - title: Equality
+        text: Equal rights, opportunities and access to resources.
+      - title: Safety
+        text: A safe environment is the foundation of recovery.
+      - title: Justice
+        text: Protecting human rights and holding violations to account.
+      - title: Support
+        text: We stand beside you and help you regain your strength.
+      - title: Women’s leadership
+        text: Women are leaders and experts of change.
+      - title: Partnership
+        text: Lasting change is built on trust.
+      - title: Professionalism
+        text: Knowledge, experience and evidence-based approaches.
+      - title: Accountability
+        text: To people, resources and results.
+    transparency:
+      eyebrow: Transparency
+      title: Reporting and partnership
+      p1: 'Each year we publish a financial and programme report: how many people received help, which projects were delivered, and how donor funds were used.'
+      p2: Donors, communities and organisations are welcome to contact us directly — details below.
+      size: PDF (Ukrainian) · %{size} MB
+      empty: Documents are being prepared.
+    contacts:
+      title: Contact
+      phone: Phone
+      hours: Mon–Fri, 09:00–18:00
+      email: Email
+      email_note: For requests about help, partnership and reporting
+      address: Address
+      city: Lviv, Ukraine
+      address_note: Visits by prior arrangement over the phone
+      instagram_note: Event announcements, support groups, useful materials
+      qr_alt: Instagram QR code @life_giving24
+      facebook_note: Organisation news and project reports
+      facebook_name: Життєдайна
+    footer:
+      tagline: 'A women’s civil society organisation: rights, safety, support and leadership.'
+      sections: Sections
+      contacts: Contact
+      slogan: Zhyttiedaina — a woman’s strength lies in her right to choose.
+      rights: "© 2026 Zhyttiedaina NGO · Lviv region"
+      edrpou: EDRPOU code 45638920
+    news:
+      eyebrow: Events and announcements
+      title: News
+      prev: Previous photo
+      next: Next photo
+      back: "← All news"
+      empty: No news in English yet.
+      missing: This news item was not found or is not available in English.
+      meta_title: News — Zhyttiedaina NGO

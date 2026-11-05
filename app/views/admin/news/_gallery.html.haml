@@ -1,0 +1,24 @@
+= turbo_frame_tag "gallery" do
+  %section.admin-panel
+    %h2= t("admin.gallery.title")
+    -# The layout shows flash on full pages; a frame update replaces only this frame.
+    - if turbo_frame_request?
+      = render "admin/shared/flash"
+    .admin-gallery
+      - last = item.images.size - 1
+      - item.images.each_with_index do |image, index|
+        .admin-thumb
+          = image_tag rails_blob_path(image.file, only_path: true), alt: image.caption.to_s
+          = form_with url: admin_news_image_path(item, image), method: :patch, class: "admin-actions admin-caption" do |form|
+            = form.text_field :caption, value: image.caption, placeholder: t("admin.gallery.caption"), "aria-label": t("admin.gallery.caption"), id: nil
+            = form.submit t("admin.save"), class: "btn btn--ghost admin-btn"
+          .admin-actions
+            = button_to "←", admin_news_image_path(item, image), method: :patch, params: { position: index - 1 }, class: "btn btn--ghost admin-btn", disabled: index.zero?, "aria-label": t("admin.gallery.move_left")
+            = button_to "→", admin_news_image_path(item, image), method: :patch, params: { position: index + 1 }, class: "btn btn--ghost admin-btn", disabled: index == last, "aria-label": t("admin.gallery.move_right")
+            = button_to t("admin.delete"), admin_news_image_path(item, image), method: :delete, class: "btn admin-btn admin-btn--danger", form: { data: { turbo_confirm: t("admin.gallery.delete_confirm") } }
+    = form_with url: admin_news_images_path(item), multipart: true, class: "admin-fields" do |form|
+      - max_mb = upload_limit(:max_image_size_mb)
+      - max_files = upload_limit(:max_images_per_upload)
+      = render "admin/shared/file_field", name: "files[]", multiple: true, accept: "image/jpeg,image/png,image/webp", max_mb: max_mb, max_files: max_files, label: t("admin.gallery.upload", max_mb: max_mb, max_files: max_files)
+      .admin-actions
+        = form.submit t("admin.gallery.submit"), class: "btn btn--primary admin-btn"

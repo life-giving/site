@@ -1,0 +1,7 @@
+.admin-head
+  %h1.title= t("admin.news.new")
+  = link_to t("admin.news.back"), admin_news_index_path
+= render "form", item: @item
+%section.admin-panel
+  %h2= t("admin.gallery.title")
+  %p.admin-hint= t("admin.gallery.save_first")

@@ -1,0 +1,6 @@
+.admin-head
+  %h1.title= t("admin.news.edit")
+  = link_to t("admin.news.back"), admin_news_index_path
+= render "form", item: @item
+= button_to t("admin.news.delete"), admin_news_path(@item), method: :delete, class: "btn admin-btn admin-btn--danger", form: { class: "admin-delete", data: { turbo_confirm: t("admin.news.delete_confirm") } }
+= render "gallery", item: @item

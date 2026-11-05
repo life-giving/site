@@ -1,0 +1,32 @@
+- max_mb = upload_limit(:max_pdf_size_mb)
+.admin-head
+  %h1.title= t("admin.reports.title")
+= form_with model: @report, url: admin_reports_path, multipart: true, class: "admin-panel admin-fields" do |form|
+  %h2= t("admin.reports.upload_title")
+  = render "admin/shared/errors", record: @report
+  .admin-row
+    %label
+      = t("admin.reports.title_uk")
+      = form.text_field :title_uk, required: true
+    %label
+      = t("admin.reports.title_en")
+      = form.text_field :title_en
+  = render "admin/shared/file_field", name: "report[file]", accept: "application/pdf", max_mb: max_mb, label: t("admin.reports.file", max_mb: max_mb)
+  .admin-actions
+    = form.submit t("admin.reports.submit"), class: "btn btn--primary admin-btn"
+.admin-panel.admin-list
+  - @reports.each_with_index do |report, index|
+    .admin-item
+      = form_with model: report, url: admin_report_path(report), class: "admin-item__main admin-report", id: nil do |form|
+        = form.text_field :title_uk, required: true, id: nil, "aria-label": t("admin.reports.title_uk")
+        = form.text_field :title_en, id: nil, "aria-label": t("admin.reports.title_en")
+        .admin-item__meta
+          = link_to "PDF", rails_blob_path(report.file, only_path: true), target: "_blank", rel: "noopener"
+          = "· #{t("admin.reports.size", size: size_in_mb(report))}"
+        = form.submit t("admin.save"), class: "btn btn--primary admin-btn"
+      .admin-actions
+        = button_to "↑", admin_report_path(report), method: :patch, params: { position: index - 1 }, class: "btn btn--ghost admin-btn", disabled: index.zero?, "aria-label": t("admin.reports.move_up")
+        = button_to "↓", admin_report_path(report), method: :patch, params: { position: index + 1 }, class: "btn btn--ghost admin-btn", disabled: index == @reports.size - 1, "aria-label": t("admin.reports.move_down")
+        = button_to t("admin.delete"), admin_report_path(report), method: :delete, class: "btn admin-btn admin-btn--danger", form: { data: { turbo_confirm: t("admin.reports.delete_confirm") } }
+  - if @reports.empty?
+    %p.admin-hint= t("admin.reports.empty")

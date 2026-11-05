@@ -1,0 +1,16 @@
+%section.hero#top
+  .wrap.hero__inner
+    .hero__copy
+      %h1= t("site.hero.title")
+      %p.hero__text= t("site.hero.text")
+      .hero__actions
+        = link_to t("site.hero.btn_help"), root_path(anchor: "help"), class: "btn btn--primary"
+        = link_to t("site.hero.btn_directions"), root_path(anchor: "directions"), class: "btn btn--ghost"
+    %aside.hero__panel
+      = image_tag "logo-vertical.png", class: "hero__logo", alt: "", width: 1000, height: 482
+      .callcard
+        %p.eyebrow= t("site.hero.card_eyebrow")
+        %strong= t("site.hero.card_title")
+        = phone_link class: "phone"
+        %small= t("site.hero.card_note")
+        %small.hero__note= t("site.hero.emergency")

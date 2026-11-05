@@ -1,0 +1,11 @@
+- content_for :title, t("site.errors.#{key}.title")
+%section.section
+  .wrap
+    .feed
+      %h1.title= t("site.errors.#{key}.title")
+      %p.lead= t("site.errors.#{key}.text")
+      %p.lead
+        = t("site.errors.help")
+        %strong= phone_link
+      %p.lead= t("site.hero.emergency")
+      = link_to t("site.errors.home"), root_path, class: "btn btn--primary"

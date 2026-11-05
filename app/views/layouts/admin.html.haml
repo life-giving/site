@@ -1,0 +1,29 @@
+!!!
+%html{lang: "uk"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    %meta{name: "robots", content: "noindex"}
+    %title= t("admin.meta_title")
+    %meta{name: "theme-color", content: "#A2238E"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    = yield :head
+    = favicon_link_tag "emblem.svg", type: "image/svg+xml"
+    = stylesheet_link_tag "application", "admin", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+  %body
+    %header.header
+      .wrap.header__inner
+        = link_to root_path, class: "brand" do
+          = image_tag "logo-horizontal.png", alt: t("site.logo_alt"), width: 161, height: 48
+        - if @current_admin
+          %nav.admin-nav
+            = link_to t("admin.nav.news"), admin_news_index_path, "aria-current": (controller_name.in?(%w[news images]) ? "page" : nil)
+            = link_to t("admin.nav.reports"), admin_reports_path, "aria-current": (controller_name == "reports" ? "page" : nil)
+            %span.admin-nav__user= @current_admin.email
+            = button_to t("admin.nav.logout"), admin_session_path, method: :delete, class: "btn btn--ghost admin-btn", data: { turbo: false }
+    %main.section.admin
+      .wrap
+        = render "admin/shared/flash"
+        = yield

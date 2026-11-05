@@ -1,0 +1,4 @@
+- if flash[:alert].present?
+  %p.admin-alert{role: "alert"}= flash[:alert]
+- if flash[:notice].present?
+  %p.admin-alert.admin-alert--ok{role: "status"}= flash[:notice]

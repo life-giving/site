@@ -1,0 +1,23 @@
+%footer.footer
+  .wrap.footer__inner
+    .footer__col
+      = image_tag "logo-horizontal-white.svg", class: "footer__logo", alt: t("site.logo_alt"), width: 161, height: 48
+      %p= t("site.footer.tagline")
+      %p.footer__slogan= t("site.footer.slogan")
+    .footer__col
+      %p.eyebrow= t("site.footer.sections")
+      = link_to t("site.nav.about"), root_path(anchor: "about")
+      = link_to t("site.nav.news"), news_index_path
+      = link_to t("site.nav.directions"), root_path(anchor: "directions")
+      = link_to t("site.nav.help"), root_path(anchor: "help")
+      = link_to t("site.nav.values"), root_path(anchor: "values")
+      = link_to t("site.nav.transparency"), root_path(anchor: "transparency")
+    .footer__col
+      %p.eyebrow= t("site.footer.contacts")
+      = phone_link
+      = email_link
+      = link_to "Instagram #{ApplicationHelper::INSTAGRAM_HANDLE}", ApplicationHelper::INSTAGRAM_URL, target: "_blank", rel: "noopener"
+      %p life-giving.org.ua
+  .wrap.footer__bottom
+    %p= t("site.footer.rights")
+    %p= t("site.footer.edrpou")

@@ -1,0 +1,25 @@
+uk:
+  activerecord:
+    attributes:
+      admin_user:
+        email: "Email"
+        password: "Пароль"
+      news_item:
+        date: "Дата"
+        title_uk: "Заголовок (UA)"
+        title_en: "Заголовок (EN)"
+        body_uk: "Текст (UA)"
+        body_en: "Текст (EN)"
+      news_image:
+        caption: "Підпис"
+        file: "Фото"
+        news_item: "Новина"
+      report:
+        title_uk: "Назва (UA)"
+        title_en: "Назва (EN)"
+        file: "Файл"
+  errors:
+    format: "%{attribute}: %{message}"
+    messages:
+      too_large: "завеликий файл: максимум %{max_mb} МБ"
+      invalid_type: "недопустимий тип файлу: дозволено %{allowed}"

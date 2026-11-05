@@ -1,0 +1,12 @@
+%section.section.band-milk.pattern.reveal#values
+  .wrap
+    .section__head
+      %h2.title= t("site.values.title")
+      %p= t("site.values.hint")
+    .values
+      - t("site.values.items").each_with_index do |value, index|
+        %article.value
+          .value__head
+            %span.value__num= format("%02d", index + 1)
+            %h3= value[:title]
+          %p= value[:text]

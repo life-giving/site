@@ -1,0 +1,12 @@
+%section.section.band-milk.reveal#directions
+  .wrap
+    .section__head
+      %h2.title= t("site.directions.title")
+      %p= t("site.directions.hint")
+    .grid
+      - %w[scale shield heart award home smile users book].zip(t("site.directions.items")).each do |name, item|
+        %details.dir
+          %summary
+            = icon(name)
+            %span= item[:title]
+          %p= item[:text]

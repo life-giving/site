@@ -1,1 +1,13 @@
 .DS_Store
+
+# Rails
+/.bundle
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/.keep
+/storage/*
+!/storage/.keep
+/config/*.key
+/public/assets
+.env*

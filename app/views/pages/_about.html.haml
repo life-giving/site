@@ -1,0 +1,17 @@
+%section.section.reveal#about
+  .wrap.split
+    .split__main
+      %p.eyebrow= t("site.about.eyebrow")
+      %h2.title= t("site.about.title")
+      %p.lead= t("site.about.p1")
+      %p.lead= t("site.about.p2")
+      .stats
+        - t("site.about.stats").each do |stat|
+          .stat
+            %b= stat[:value]
+            %span= stat[:text]
+    %aside.areas
+      %h3= t("site.about.box_title")
+      %ul
+        - t("site.about.box_items").each do |item|
+          %li= item

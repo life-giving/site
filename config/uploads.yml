@@ -1,0 +1,6 @@
+# Upload limits; sizes are per file, in megabytes. Override per deployment with env vars.
+# config/puma.rb reads this file too, to refuse larger requests before they reach the app.
+shared:
+  max_image_size_mb: <%= ENV.fetch("MAX_IMAGE_SIZE_MB", 10) %>
+  max_pdf_size_mb: <%= ENV.fetch("MAX_PDF_SIZE_MB", 20) %>
+  max_images_per_upload: <%= ENV.fetch("MAX_IMAGES_PER_UPLOAD", 10) %>

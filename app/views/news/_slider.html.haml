@@ -1,0 +1,12 @@
+- many = item.images.many?
+.slider{data: {controller: "slider"}}
+  .slider__track{data: {slider_target: "track", action: "scroll->slider#update"}}
+    - item.images.each do |image|
+      %figure
+        = image_tag rails_blob_path(image.file, only_path: true), alt: image.caption.presence || item.title, loading: "lazy"
+        - if image.caption.present?
+          %figcaption= image.caption
+  - if many
+    %button.slider__btn.slider__btn--prev{type: "button", "aria-label": t("site.news.prev"), data: {action: "slider#previous"}} ‹
+    %button.slider__btn.slider__btn--next{type: "button", "aria-label": t("site.news.next"), data: {action: "slider#next"}} ›
+    %span.slider__count{"aria-hidden": "true", data: {slider_target: "count"}}= "1 / #{item.images.size}"

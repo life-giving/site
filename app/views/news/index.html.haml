@@ -1,0 +1,9 @@
+- content_for :title, t("site.news.meta_title")
+%section.section
+  .wrap
+    %p.eyebrow= t("site.news.eyebrow")
+    %h1.title.title--spaced= t("site.news.title")
+    - if @items.any?
+      .feed= render partial: "post", collection: @items, as: :item, locals: { single: false }
+    - else
+      %p.lead.feed__empty= t("site.news.empty")

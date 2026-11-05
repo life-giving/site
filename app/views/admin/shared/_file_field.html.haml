@@ -1,0 +1,6 @@
+-# Warns about oversized files before upload. The server enforces the limit either way.
+.admin-fields{data: {controller: "file-size", file_size_max_mb_value: max_mb, file_size_template_value: t("admin.file_too_large", name: "%{name}", max_mb: max_mb), file_size_max_files_value: local_assigns[:max_files], file_size_too_many_value: local_assigns[:max_files] && t("admin.too_many_files", max_files: max_files)}}
+  %label
+    = label
+    = file_field_tag name, id: nil, accept: accept, multiple: local_assigns.fetch(:multiple, false), required: true, data: { action: "file-size#check" }
+  %p.admin-alert{hidden: true, data: {file_size_target: "message"}}

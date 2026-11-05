@@ -1,0 +1,11 @@
+%section.band-deep.reveal
+  .wrap.band-deep__inner
+    .band-deep__col
+      %p.eyebrow= t("site.mission.eyebrow")
+      %p.mission= t("site.mission.text")
+    .band-deep__col
+      %p.eyebrow= t("site.mission.vision_eyebrow")
+      %ul.vision
+        - t("site.mission.vision_items").each do |item|
+          %li
+            %span= item

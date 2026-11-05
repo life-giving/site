@@ -1,0 +1,13 @@
+-# A gallery action with an expired session lands here: this makes Turbo leave the frame and show the page.
+- content_for :head do
+  %meta{name: "turbo-visit-control", content: "reload"}
+-# A plain form post: under that meta tag, Turbo would reload a failed login and lose its error.
+= form_with url: admin_session_path, class: "admin-panel admin-login admin-fields", data: { turbo: false } do |form|
+  %h1.title= t("admin.session.title")
+  %label
+    = t("admin.session.email")
+    = form.email_field :email, autocomplete: "username", required: true
+  %label
+    = t("admin.session.password")
+    = form.password_field :password, autocomplete: "current-password", required: true
+  = form.submit t("admin.session.submit"), class: "btn btn--primary"

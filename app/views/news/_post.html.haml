@@ -1,0 +1,9 @@
+%article.post
+  %time{datetime: item.date.iso8601}= l(item.date, format: :news)
+  - if single
+    %h1.title= item.title
+  - else
+    %h2= link_to item.title, news_path(item)
+  - if item.images.any?
+    = render "slider", item: item
+  .post__body= MarkdownRenderer.render(item.body)

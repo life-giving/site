@@ -1,0 +1,16 @@
+!!!
+%html{lang: I18n.locale}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    %title= content_for(:title) || t("site.meta.title")
+    %meta{name: "description", content: t("site.meta.description")}
+    %meta{name: "theme-color", content: "#A2238E"}
+    = csp_meta_tag
+    = favicon_link_tag "emblem.svg", type: "image/svg+xml"
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+  %body
+    = render "shared/header"
+    %main= yield
+    = render "shared/footer"

@@ -1,0 +1,2 @@
+- if record.errors.any?
+  %p.admin-alert{role: "alert"}= record.errors.full_messages.join("\n")

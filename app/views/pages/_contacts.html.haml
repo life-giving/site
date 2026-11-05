@@ -1,0 +1,25 @@
+%section.section.band-milk.reveal#contacts
+  .wrap
+    %h2.title= t("site.contacts.title")
+    .contacts
+      .contact
+        %p.eyebrow= t("site.contacts.phone")
+        %strong= phone_link
+        %p= t("site.contacts.hours")
+      .contact
+        %p.eyebrow= t("site.contacts.email")
+        %strong= email_link
+        %p= t("site.contacts.email_note")
+      .contact
+        %p.eyebrow= t("site.contacts.address")
+        %strong= t("site.contacts.city")
+        %p= t("site.contacts.address_note")
+      .contact.contact--social
+        %p.eyebrow Instagram
+        %strong= link_to ApplicationHelper::INSTAGRAM_HANDLE, ApplicationHelper::INSTAGRAM_URL, target: "_blank", rel: "noopener"
+        %p= t("site.contacts.instagram_note")
+        = image_tag "instagram-qr.png", class: "contact__qr", alt: t("site.contacts.qr_alt"), width: 104, height: 104, loading: "lazy"
+      .contact.contact--social
+        %p.eyebrow Facebook
+        %strong= link_to t("site.contacts.facebook_name"), "https://www.facebook.com/", target: "_blank", rel: "noopener"
+        %p= t("site.contacts.facebook_note")

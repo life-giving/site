@@ -1,0 +1,6 @@
+- content_for :title, t("site.news.meta_title")
+%section.section
+  .wrap
+    .feed
+      = link_to t("site.news.back"), news_index_path, class: "feed__back"
+      %p.lead.feed__empty= t("site.news.missing")

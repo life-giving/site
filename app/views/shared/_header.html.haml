@@ -1,0 +1,22 @@
+%header.header{data: {controller: "menu", action: "keydown@window->menu#closeOnEscape"}}
+  .wrap.header__inner
+    = link_to root_path(anchor: "top"), class: "brand" do
+      %picture
+        %source{media: "(max-width:420px)", srcset: image_path("emblem.svg")}
+        = image_tag "logo-horizontal.png", alt: t("site.logo_alt"), width: 161, height: 48
+    %nav.nav#site-nav{data: {action: "click->menu#close"}}
+      = link_to t("site.nav.about"), root_path(anchor: "about")
+      = link_to t("site.nav.news"), news_index_path
+      = link_to t("site.nav.directions"), root_path(anchor: "directions")
+      = link_to t("site.nav.help"), root_path(anchor: "help")
+      = link_to t("site.nav.values"), root_path(anchor: "values")
+      = link_to t("site.nav.transparency"), root_path(anchor: "transparency")
+      = link_to t("site.nav.contacts"), root_path(anchor: "contacts")
+    .lang{role: "group", "aria-label": t("site.lang_label")}
+      -# Full reloads, so Turbo can't restore a cached page in the previous language.
+      - { uk: "UA", en: "EN" }.each do |locale, label|
+        = link_to label, "?lang=#{locale}", class: "lang__btn", "aria-current": (I18n.locale == locale).to_s, data: { turbo: false }
+    %button.burger{type: "button", "aria-controls": "site-nav", "aria-expanded": "false", "aria-label": t("site.nav.menu"), data: {menu_target: "button", action: "menu#toggle"}}
+      %span
+      %span
+      %span

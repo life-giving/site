@@ -1,0 +1,11 @@
+.admin-head
+  %h1.title= t("admin.news.title")
+  = link_to t("admin.news.add"), new_admin_news_path, class: "btn btn--primary admin-btn"
+.admin-panel.admin-list
+  - @items.each do |item|
+    .admin-item
+      .admin-item__main
+        = link_to item.title_uk, edit_admin_news_path(item)
+        .admin-item__meta= t("admin.news.meta", date: item.date.iso8601, languages: item.title_en.present? ? "UA, EN" : "UA", photos: item.images.size)
+  - if @items.empty?
+    %p.admin-hint= t("admin.news.empty")
